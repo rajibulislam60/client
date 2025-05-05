@@ -1,8 +1,31 @@
 import React from "react";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router";
+import Home from "./pages/Home";
+import RootLayOut from "./layout/RootLayOut";
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <>
+      <Route>
+        <Route path="/" element={<RootLayOut />}>
+          <Route index element={<Home />} />
+          {/* <Route path="/login" element={<Login />} /> */}
+        </Route>
+      </Route>
+    </>
+  )
+);
 
 const App = () => {
   return (
-    <div className="bg-black text-white text-center font-3xl py-3">App</div>
+    <div>
+      <RouterProvider router={router} />
+    </div>
   );
 };
 
