@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
 import HeroImage1 from "../images/hero-slider-01.jpg";
 import HeroImage2 from "../images/hero-slider-02.jpg";
@@ -29,19 +29,22 @@ const slides = [
   },
 ];
 
-const settings = {
-  dots: true,
-  infinite: true,
-  autoplay: true,
-  autoplaySpeed: 4000,
-  speed: 1000,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  arrows: false,
-  pauseOnHover: false,
-};
-
 const HeroPart = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    speed: 1000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    pauseOnHover: false,
+    beforeChange: (_, next) => setCurrentSlide(next),
+  };
+
   return (
     <Slider {...settings}>
       {slides.map((slide, index) => (
@@ -50,18 +53,23 @@ const HeroPart = () => {
             className="w-full h-[700px] bg-cover bg-center flex items-center relative"
             style={{ backgroundImage: `url(${slide.image})` }}
           >
-            <div className=" inset-0 z-10" />
+            <div className="inset-0" />
             <Container>
-              <div className=" slide-down">
+              <div
+                key={
+                  currentSlide === index
+                    ? `active-${index}`
+                    : `inactive-${index}`
+                }
+                className=" slide-down"
+              >
                 <h3 className="text-lg font-medium tracking-widest uppercase">
                   {slide.title}
                 </h3>
                 <h2 className="text-5xl font-bold leading-tight mt-4">
                   {slide.subtitle}
                 </h2>
-                <p className="text-base text-gray-700 mt-4">
-                  {slide.description}
-                </p>
+                <p className="text-base mt-4">{slide.description}</p>
               </div>
             </Container>
           </div>
