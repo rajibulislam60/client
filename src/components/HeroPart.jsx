@@ -34,7 +34,7 @@ const HeroPart = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     autoplay: true,
     autoplaySpeed: 4000,
