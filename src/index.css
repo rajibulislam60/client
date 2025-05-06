@@ -2,8 +2,8 @@
 
 .slide-down {
   opacity: 0;
-  transform: translateY(-80px);
-  animation: slideDown 1s ease-out forwards;
+  transform: translateY(-150px);
+  animation: slideDown 3s ease-out forwards;
 }
 
 @keyframes slideDown {

@@ -5,6 +5,7 @@ import HeroImage2 from "../images/hero-slider-02.jpg";
 import HeroImage3 from "../images/hero-slider-03.jpg";
 import Container from "./Container";
 import "../../src/index.css";
+import Button from "./Button";
 
 const slides = [
   {
@@ -70,6 +71,10 @@ const HeroPart = () => {
                   {slide.subtitle}
                 </h2>
                 <p className="text-base mt-4">{slide.description}</p>
+                <Button
+                  btnName="Shop Now"
+                  className="bg-black text-white mt-10"
+                />
               </div>
             </Container>
           </div>
