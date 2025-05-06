@@ -7,6 +7,8 @@ import {
 } from "react-router";
 import Home from "./pages/Home";
 import RootLayOut from "./layout/RootLayOut";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
