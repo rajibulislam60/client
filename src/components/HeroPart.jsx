@@ -73,7 +73,7 @@ const HeroPart = () => {
                 <p className="text-base mt-4">{slide.description}</p>
                 <Button
                   btnName="Shop Now"
-                  className="bg-black text-white mt-10"
+                  className="bg-black text-white px-6 py-3 text-3xl font-semibold mt-10"
                 />
               </div>
             </Container>

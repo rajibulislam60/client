@@ -7,6 +7,7 @@ import ProductImage1 from "../images/product1.jpg";
 import ProductImage2 from "../images/product2.jpg";
 import ProductImage3 from "../images/product3.jpg";
 import ProductImage4 from "../images/product4.jpg";
+import FeatureBanner from "./feature/FeatureBanner";
 
 const Feature = () => {
   const products = [
@@ -48,29 +49,32 @@ const Feature = () => {
   };
 
   return (
-    <div className="bg-[#F8F8F8] py-20">
-      <Container>
-        <div>
-          <Title
-            titleName="Our Featured Products"
-            titlePera="Get the skin you want to feel"
-          />
+    <div>
+      <div className="bg-[#F8F8F8] py-20">
+        <Container>
+          <div>
+            <Title
+              titleName="Our Featured Products"
+              titlePera="Get the skin you want to feel"
+            />
 
-          <div className="mt-10">
-            <Slider {...settings}>
-              {products.map((product) => (
-                <div key={product.id} className="flex justify-center">
-                  <ProductItem
-                    src={product.src}
-                    price={product.price}
-                    itemName={product.itemName}
-                  />
-                </div>
-              ))}
-            </Slider>
+            <div className="mt-10">
+              <Slider {...settings}>
+                {products.map((product) => (
+                  <div key={product.id} className="flex justify-center">
+                    <ProductItem
+                      src={product.src}
+                      price={product.price}
+                      itemName={product.itemName}
+                    />
+                  </div>
+                ))}
+              </Slider>
+            </div>
           </div>
-        </div>
-      </Container>
+        </Container>
+      </div>
+      <FeatureBanner />
     </div>
   );
 };
