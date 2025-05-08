@@ -8,6 +8,7 @@ import ProductImage2 from "../images/product2.jpg";
 import ProductImage3 from "../images/product3.jpg";
 import ProductImage4 from "../images/product4.jpg";
 import FeatureBanner from "./feature/FeatureBanner";
+import FeatureDetails from "./feature/FeatureDetails";
 
 const Feature = () => {
   const products = [
@@ -75,6 +76,11 @@ const Feature = () => {
         </Container>
       </div>
       <FeatureBanner />
+      <Container>
+        <div>
+          <FeatureDetails />
+        </div>
+      </Container>
     </div>
   );
 };
