@@ -9,6 +9,9 @@ import ProductImage3 from "../images/product3.jpg";
 import ProductImage4 from "../images/product4.jpg";
 import FeatureBanner from "./feature/FeatureBanner";
 import FeatureDetails from "./feature/FeatureDetails";
+import { FiBox } from "react-icons/fi";
+import { GiReturnArrow } from "react-icons/gi";
+import { MdSupportAgent, MdPayment } from "react-icons/md";
 
 const Feature = () => {
   const products = [
@@ -49,6 +52,29 @@ const Feature = () => {
     ],
   };
 
+  const features = [
+    {
+      Icon: FiBox,
+      nameDetails: "Free Shipping",
+      details: "Enjoy free shipping on all orders over $50.",
+    },
+    {
+      Icon: GiReturnArrow,
+      nameDetails: "Returns",
+      details: "Within 7 days for an exchange.",
+    },
+    {
+      Icon: MdSupportAgent,
+      nameDetails: "Online Support",
+      details: "24 hours a day, 7 days a week",
+    },
+    {
+      Icon: MdPayment,
+      nameDetails: "Flexible Payment",
+      details: "Pay with Multiple Credit Cards",
+    },
+  ];
+
   return (
     <div>
       <div className="bg-[#F8F8F8] py-20">
@@ -76,11 +102,20 @@ const Feature = () => {
         </Container>
       </div>
       <FeatureBanner />
-      <Container>
-        <div>
-          <FeatureDetails />
-        </div>
-      </Container>
+      <div className="py-10">
+        <Container>
+          <div className="flex justify-between flex-wrap gap-4">
+            {features.map((feature, index) => (
+              <FeatureDetails
+                key={index}
+                Icon={feature.Icon}
+                nameDetails={feature.nameDetails}
+                details={feature.details}
+              />
+            ))}
+          </div>
+        </Container>
+      </div>
     </div>
   );
 };

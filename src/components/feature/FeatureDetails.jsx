@@ -1,16 +1,13 @@
 import React from "react";
-import { FiBox } from "react-icons/fi";
 
-const FeatureDetails = () => {
+const FeatureDetails = ({ Icon, nameDetails, details }) => {
   return (
-    <div className="text-center w-[24%] p-4 border rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-      <div className="text-4xl text-blue-500 mb-2">
-        <FiBox aria-label="Free Shopping Icon" />
+    <div className="text-center w-[24%] p-4">
+      <div className="text-6xl flex items-center justify-center mb-2">
+        <Icon aria-label="Free Shopping Icon" />
       </div>
-      <h3 className="text-lg font-semibold mb-1">Free Shipping</h3>
-      <p className="text-sm text-gray-600">
-        Free Shipping for orders over 6,000TK
-      </p>
+      <h3 className="text-lg font-semibold mb-1">{nameDetails}</h3>
+      <p className="text-sm text-gray-600">{details}</p>
     </div>
   );
 };
