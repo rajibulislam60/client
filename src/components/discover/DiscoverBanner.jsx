@@ -1,6 +1,7 @@
 import React from "react";
 import ImageBox1 from "../../images/image-box-white-10-1.jpg";
 import ImageBox2 from "../../images/image-box-white-12.jpg";
+import { FaArrowRight } from "react-icons/fa6";
 
 const DiscoverBanner = () => {
   return (
@@ -9,8 +10,8 @@ const DiscoverBanner = () => {
         <img src={ImageBox1} alt="Summer Collection Image Box" />
         <div className="mt-6">
           <h3 className="text-3xl font-semibold">Summer Collection</h3>
-          <button className="text-xl font-medium hover:text-[#C09B61] mt-3">
-            Shop Now
+          <button className="text-xl mx-auto flex gap-3 items-center font-medium hover:text-[#C09B61] mt-3">
+            Shop Now <FaArrowRight />
           </button>
         </div>
       </div>
@@ -18,8 +19,8 @@ const DiscoverBanner = () => {
         <img src={ImageBox2} alt="Summer Collection Image Box" />
         <div className="mt-6">
           <h3 className="text-3xl font-semibold">Summer Collection</h3>
-          <button className="text-xl font-medium hover:text-[#C09B61] mt-3">
-            Read More
+          <button className="text-xl mx-auto flex gap-3 items-center font-medium hover:text-[#C09B61] mt-3">
+            Read More <FaArrowRight />
           </button>
         </div>
       </div>
