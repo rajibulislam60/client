@@ -15,6 +15,7 @@ const Customer = () => {
     { id: 3, src: ProductImage3, price: 750, itemName: "Aloe Vera Gel" },
     { id: 4, src: ProductImage4, price: 450, itemName: "Rose Water Toner" },
     { id: 5, src: ProductImage3, price: 850, itemName: "Night Repair Cream" },
+    { id: 6, src: ProductImage1, price: 550, itemName: "Glowing Skin Siram" },
   ];
 
   return (
@@ -30,7 +31,7 @@ const Customer = () => {
             <img
               src={customerBannerImage}
               alt="Customer Banner"
-              className="w-full h-full object-cover rounded-lg"
+              className="w-full h-full object-cover"
             />
           </div>
 

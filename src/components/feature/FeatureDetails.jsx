@@ -3,7 +3,7 @@ import React from "react";
 const FeatureDetails = ({ Icon, nameDetails, details }) => {
   return (
     <div className="text-center w-[24%] p-4">
-      <div className="text-6xl flex items-center justify-center mb-2">
+      <div className="text-6xl flex items-center justify-center text-[#C09B61] mb-2">
         <Icon aria-label="Free Shopping Icon" />
       </div>
       <h3 className="text-lg font-semibold mb-1">{nameDetails}</h3>

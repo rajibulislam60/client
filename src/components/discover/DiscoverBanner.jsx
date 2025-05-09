@@ -1,0 +1,30 @@
+import React from "react";
+import ImageBox1 from "../../images/image-box-white-10-1.jpg";
+import ImageBox2 from "../../images/image-box-white-12.jpg";
+
+const DiscoverBanner = () => {
+  return (
+    <div className="flex justify-between py-10">
+      <div className="text-center w-[49%]">
+        <img src={ImageBox1} alt="Summer Collection Image Box" />
+        <div className="mt-6">
+          <h3 className="text-3xl font-semibold">Summer Collection</h3>
+          <button className="text-xl font-medium hover:text-[#C09B61] mt-3">
+            Shop Now
+          </button>
+        </div>
+      </div>
+      <div className="text-center w-[49%]">
+        <img src={ImageBox2} alt="Summer Collection Image Box" />
+        <div className="mt-6">
+          <h3 className="text-3xl font-semibold">Summer Collection</h3>
+          <button className="text-xl font-medium hover:text-[#C09B61] mt-3">
+            Read More
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default DiscoverBanner;
