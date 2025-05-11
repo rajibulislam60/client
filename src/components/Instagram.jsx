@@ -1,27 +1,37 @@
 import React from "react";
 import Container from "./Container";
 import insagramImage1 from "../images/instagram-01-320x320.jpg";
-import { FaInstagram } from "react-icons/fa";
+import insagramImage2 from "../images/instagram-02-320x320.jpg";
+import insagramImage3 from "../images/instagram-03-320x320.jpg";
+import insagramImage4 from "../images/instagram-04.jpg";
+import insagramImage5 from "../images/instagram-05-320x320.jpg";
+import { FaFacebookF } from "react-icons/fa";
 
 const Instagram = () => {
-  const images = [1, 2, 3, 4, 5]; // Using a simple array to map over
+  const images = [
+    insagramImage1,
+    insagramImage2,
+    insagramImage3,
+    insagramImage4,
+    insagramImage5,
+  ];
 
   return (
-    <div>
+    <div className="py-10">
       <Container>
         <div className="flex justify-between items-center gap-4 flex-wrap">
-          {images.map((_, index) => (
+          {images.map((image, index) => (
             <div
               key={index}
               className="relative group w-[220px] h-[220px] overflow-hidden"
             >
               <img
-                src={insagramImage1}
-                alt="Instagram"
+                src={image}
+                alt={`Instagram ${index + 1}`}
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-black/30 bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <FaInstagram className="text-white text-2xl" />
+              <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <FaFacebookF className="text-white text-3xl" />{" "}
               </div>
             </div>
           ))}
