@@ -14,18 +14,14 @@ const Navbar = () => {
   };
 
   return (
-    <div className="py-2 shadow-sm border-b">
+    <div className="py-2 shadow-sm border-b relative">
       <Container>
-        {/* Wrapper */}
-        <div className="flex items-center justify-between md:justify-normal md:gap-10">
-          {/* Mobile: Toggle icon */}
+        <div className="flex relative items-center justify-between md:justify-normal md:gap-10">
           <div className="md:hidden">
             <button onClick={toggleMenu} className="text-2xl">
               {isMobileMenuOpen ? <HiX /> : <HiMenu />}
             </button>
           </div>
-
-          {/* Logo - centered in mobile, left in desktop */}
           <div className="flex-1 flex justify-center md:justify-start">
             <img className="w-24 md:w-28" src={logoImage} alt="Logo" />
           </div>
@@ -58,7 +54,7 @@ const Navbar = () => {
 
         {/* Mobile Nav Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 space-y-3 text-center">
+          <div className="md:hidden mt-4 space-y-3 absolute">
             <Link to="/" onClick={toggleMenu}>
               <h3 className="uppercase text-base font-medium hover:text-[#C09B61]">
                 Home
