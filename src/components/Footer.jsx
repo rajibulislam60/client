@@ -9,7 +9,7 @@ const Footer = () => {
     <div className="py-15 bg-gray-200">
       <Container>
         <div>
-          <div className="flex justify-between">
+          <div className="md:flex justify-between">
             <div>
               <h4 className="text-2xl font-semibold mb-4">Company</h4>
               <p className="text-gray-500">
@@ -46,9 +46,9 @@ const Footer = () => {
             </div>
           </div>
           <div className="w-full h-[1px] bg-gray-600 my-5"></div>
-          <div className="flex justify-between items-center">
-            <div className="flex items-center gap-3">
-              <div className="flex gap-1 items-center text-xl text-gray-500">
+          <div className="flex justify-between gap-1 items-center">
+            <div className="flex items-center md:gap-3">
+              <div className="flex gap-1 items-center text-[12px] md:text-xl text-gray-500">
                 <FaRegCopyright />
                 <h4>Rajelisse Beauty 2025</h4>
               </div>
@@ -56,11 +56,11 @@ const Footer = () => {
               <FaInstagram />
             </div>
             <img
-              className="w-[100px]"
+              className="w-[30px] md:w-[100px]"
               src={footerLogoImage}
               alt="Footer Logo Image"
             />
-            <img src={paymentImage} alt="Payment Image" />
+            <img className="w-[40%]" src={paymentImage} alt="Payment Image" />
           </div>
         </div>
       </Container>
