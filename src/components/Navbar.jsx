@@ -14,7 +14,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="py-2 shadow-sm border-b relative">
+    <div className="py-2 shadow-sm">
       <Container>
         <div className="flex relative items-center justify-between md:justify-normal md:gap-10">
           <div className="md:hidden">
@@ -54,7 +54,7 @@ const Navbar = () => {
 
         {/* Mobile Nav Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 space-y-3 absolute">
+          <div className="md:hidden mt-4 space-y-3 ">
             <Link to="/" onClick={toggleMenu}>
               <h3 className="uppercase text-base font-medium hover:text-[#C09B61]">
                 Home
