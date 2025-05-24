@@ -26,16 +26,16 @@ const Customer = () => {
           titlePera="Made using clean, non-toxic ingredients, our products are designed for everyone."
         />
 
-        <div className="flex gap-6 mt-6 py-6">
-          <div className="w-[40%]">
+        <div className="md:flex gap-6 mt-6 py-6">
+          <div className="w-full md:w-[40%]">
             <img
               src={customerBannerImage}
               alt="Customer Banner"
-              className="w-full h-full object-cover"
+              className="w-full h-[200px] md:h-full object-cover"
             />
           </div>
 
-          <div className="w-[60%] grid grid-cols-3 gap-4">
+          <div className="w-full md:w-[60%] mt-2 md:mt-0 grid grid-cols-2 md:grid-cols-3 gap-4">
             {products.map((product) => (
               <ProductItem
                 key={product.id}
