@@ -23,7 +23,7 @@ const Instagram = () => {
           {images.map((image, index) => (
             <div
               key={index}
-              className="relative group w-[220px] h-[220px] overflow-hidden"
+              className="relative group sm:w-full md:w-[220px] md:h-[220px] overflow-hidden"
             >
               <img
                 src={image}

@@ -5,8 +5,8 @@ import { FaArrowRight } from "react-icons/fa6";
 
 const DiscoverBanner = () => {
   return (
-    <div className="flex justify-between py-10">
-      <div className="text-center w-[49%]">
+    <div className="md:flex justify-between py-10">
+      <div className="text-center w-full md:w-[49%]">
         <img src={ImageBox1} alt="Summer Collection Image Box" />
         <div className="mt-6">
           <h3 className="text-3xl font-semibold">Summer Collection</h3>
@@ -15,7 +15,7 @@ const DiscoverBanner = () => {
           </button>
         </div>
       </div>
-      <div className="text-center w-[49%]">
+      <div className="text-center w-full md:w-[49%] mt-4 md:mt-0">
         <img src={ImageBox2} alt="Summer Collection Image Box" />
         <div className="mt-6">
           <h3 className="text-3xl font-semibold">Summer Collection</h3>
