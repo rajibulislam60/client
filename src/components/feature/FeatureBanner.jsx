@@ -8,11 +8,11 @@ const FeatureBanner = () => {
   return (
     <div>
       <Container>
-        <div className="flex gap-5 mt-12">
+        <div className="md:flex gap-5 mt-12">
           {[featureImage1, featureImage2].map((img, idx) => (
             <div
               key={idx}
-              className="w-[50%] h-[350px] overflow-hidden relative group"
+              className="w-[100%] md:w-[50%] h-[350px] overflow-hidden relative group"
             >
               <div
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
@@ -31,7 +31,7 @@ const FeatureBanner = () => {
                     </h3>
                     <Button
                       btnName="Explore More"
-                      className="bg-white text-2xl font-bold px-3 py-2 mt-6"
+                      className="bg-white text-xl md:text-2xl font-semibold md:font-bold px-3 py-2 mt-6"
                     />
                   </>
                 ) : (
@@ -45,7 +45,7 @@ const FeatureBanner = () => {
                     </p>
                     <Button
                       btnName="Shop Sale"
-                      className="bg-white text-2xl font-bold px-3 py-2 mt-6"
+                      className="bg-white text-xl md:text-2xl font-semibold md:font-bold px-3 py-2 mt-6"
                     />
                   </>
                 )}
