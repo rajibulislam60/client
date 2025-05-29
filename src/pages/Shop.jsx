@@ -2,6 +2,7 @@ import React from "react";
 import Container from "./../components/Container";
 import ShopCate from "../components/shop/ShopCate";
 import Product from "../components/shop/Product";
+import Pagination from "../components/shop/Pagination";
 
 const Shop = () => {
   return (
@@ -11,6 +12,7 @@ const Shop = () => {
           <ShopCate />
           <Product />
         </div>
+        <Pagination />
       </Container>
     </div>
   );
