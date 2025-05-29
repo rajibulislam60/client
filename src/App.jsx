@@ -10,6 +10,7 @@ import RootLayOut from "./layout/RootLayOut";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Shop from "./pages/Shop";
+import Category from "./pages/Category";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -17,6 +18,7 @@ const router = createBrowserRouter(
       <Route>
         <Route path="/" element={<RootLayOut />}>
           <Route index element={<Home />} />
+          <Route path="/category" element={<Category />} />
           <Route path="/shop" element={<Shop />} />
         </Route>
       </Route>
