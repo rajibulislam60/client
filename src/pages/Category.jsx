@@ -1,33 +1,49 @@
 import React from "react";
 import Container from "./../components/Container";
-import categoryImage from "../images/instagram-04.jpg";
+import makeupImage from "../images/makeup.avif";
+import kBeautyImage from "../images/kbeauty.jpg";
+import haircareImage from "../images/haircare.jpeg";
+import skincareImage from "../images/skincare.avif";
+import facecareImage from "../images/facecare.webp";
+import undergarmentsImage from "../images/undergraments.webp";
+import perfumeImage from "../images/perfume.jpg";
 
 const Category = () => {
   const data = [
     {
       id: 1,
-      image: categoryImage,
-      name: "Skin Care",
+      image: makeupImage,
+      name: "MakeUp",
     },
     {
       id: 2,
-      image: categoryImage,
-      name: "Skin Care",
+      image: kBeautyImage,
+      name: "K-Beauty",
     },
     {
       id: 3,
-      image: categoryImage,
-      name: "Skin Care",
+      image: haircareImage,
+      name: "Hair Care",
     },
     {
       id: 4,
-      image: categoryImage,
+      image: skincareImage,
       name: "Skin Care",
     },
     {
       id: 5,
-      image: categoryImage,
-      name: "Skin Care",
+      image: facecareImage,
+      name: "Face Care",
+    },
+    {
+      id: 6,
+      image: undergarmentsImage,
+      name: "Undergarments",
+    },
+    {
+      id: 7,
+      image: perfumeImage,
+      name: "Perfume",
     },
   ];
   return (
