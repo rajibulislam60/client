@@ -1,25 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Pagination = () => {
+  const [activePage, setActivePage] = useState(1);
+  const totalPages = 5;
+  const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
   return (
     <div className="flex justify-between items-center mt-6">
-      <button className="px-4 py-2 cursor-pointer hover:bg-teal-700 hover:text-white border rounded-md">
+      <button
+        onClick={() => setActivePage((prev) => Math.min(prev + 1, totalPages))}
+        disabled={activePage === 1}
+        className="px-4 py-2 cursor-pointer hover:bg-teal-700 hover:text-white border rounded-md"
+      >
         Prev
       </button>
 
       <ul className="flex items-center gap-2">
-        <li className="px-3 py-2 border rounded-md bg-teal-700 text-white cursor-pointer">
-          1
-        </li>
-        <li className="px-3 py-2 border rounded-md hover:bg-gray-200 cursor-pointer">
-          2
-        </li>
-        <li className="px-3 py-2 border rounded-md hover:bg-gray-200 cursor-pointer">
-          3
-        </li>
+        {pages.map((page) => (
+          <li
+            key={page}
+            onClick={() => setActivePage(page)}
+            className={`px-3 py-2 border rounded-md cursor-pointer transition-all ${
+              activePage === page
+                ? "bg-teal-700 text-white"
+                : "hover:bg-gray-200"
+            }`}
+          >
+            {page}
+          </li>
+        ))}
       </ul>
 
-      <button className="px-4 py-2 cursor-pointer hover:bg-teal-700 hover:text-white border rounded-md">
+      <button
+        onClick={() => setActivePage((prev) => Math.min(prev + 1, totalPages))}
+        disabled={activePage === totalPages}
+        className="px-4 py-2 cursor-pointer hover:bg-teal-700 hover:text-white border rounded-md"
+      >
         Next
       </button>
     </div>
