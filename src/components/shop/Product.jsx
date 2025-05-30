@@ -1,36 +1,36 @@
 import React from "react";
-import productImage from "../../images/product1.jpg";
+// import productImage from "../../images/product1.jpg";
 
-const ProductItem = () => {
-  const data = [
-    {
-      id: 1,
-      src: productImage,
-      price: "1000",
-      itemName: "shfksdfnksdnvk",
-    },
-    {
-      id: 2,
-      src: productImage,
-      price: "1000",
-      itemName: "shfksdfnksdnvk",
-    },
-    {
-      id: 3,
-      src: productImage,
-      price: "1000",
-      itemName: "shfksdfnksdnvk",
-    },
-    {
-      id: 4,
-      src: productImage,
-      price: "1000",
-      itemName: "shfksdfnksdnvk",
-    },
-  ];
+const ProductItem = ({ data }) => {
+  // const data = [
+  //   {
+  //     id: 1,
+  //     src: productImage,
+  //     price: "1000",
+  //     itemName: "shfksdfnksdnvk",
+  //   },
+  //   {
+  //     id: 2,
+  //     src: productImage,
+  //     price: "1000",
+  //     itemName: "shfksdfnksdnvk",
+  //   },
+  //   {
+  //     id: 3,
+  //     src: productImage,
+  //     price: "1000",
+  //     itemName: "shfksdfnksdnvk",
+  //   },
+  //   {
+  //     id: 4,
+  //     src: productImage,
+  //     price: "1000",
+  //     itemName: "shfksdfnksdnvk",
+  //   },
+  // ];
 
   return (
-    <div className="flex gap-3">
+    <div className="grid grid-cols-3 gap-3">
       {data.map((item) => (
         <div
           key={item.id}

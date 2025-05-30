@@ -1,13 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 
-const Pagination = () => {
-  const [activePage, setActivePage] = useState(1);
-  const totalPages = 5;
+const Pagination = ({ total, perPage, activePage, setActivePage }) => {
+  const totalPages = Math.ceil(total / perPage);
   const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
   return (
     <div className="flex justify-between items-center mt-6">
       <button
-        onClick={() => setActivePage((prev) => Math.min(prev + 1, totalPages))}
+        onClick={() => setActivePage((prev) => Math.max(prev - 1, 1))}
         disabled={activePage === 1}
         className="px-4 py-2 cursor-pointer hover:bg-teal-700 hover:text-white border rounded-md"
       >
